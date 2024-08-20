@@ -1,1 +1,1 @@
-# rock-paper-scissors
+Novi projekat iz ODIN kursa.Ovo je igrica kamen,papir,makaze.
