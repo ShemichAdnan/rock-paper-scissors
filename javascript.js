@@ -74,16 +74,20 @@ function playRound(humanChoice, computerChoice) {
   
 let playGame=()=>{
     for(let round=1;round<=5;round++){
+        console.log(`Round - ${round}`)
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
-        console.log(`Round - ${round}`)
         playRound(humanSelection, computerSelection);
         console.log(`${humanScore} - ${computerScore}`)
     }
     if(humanScore>computerScore){
-        console.log(`Human won the game! [${humanScore} - ${computerScore}]`)
+        console.log(`You won the game! [${humanScore} - ${computerScore}]`)
     }else if(humanScore<computerScore){
         console.log(`Computer won the game! [${computerScore} - ${humanScore}]`)
+    }else if(humanScore==computerScore){
+        console.log(`Tie! [${computerScore} - ${humanScore}]`)
     }
+    computerScore=0
+    humanScore=0
     alert("Thanks for playing!")
 }
