@@ -19,6 +19,8 @@ const hChoice=document.querySelector("#hChoice");
 const cChoice=document.querySelector("#cChoice");
 const computer=document.querySelector("#computer")
 const human=document.querySelector("#human");
+const result=document.createElement("h1");
+const main=document.querySelector("main")
 
 let finishedGame=false;
 function playRound(humanChoice, computerChoice) {
@@ -79,9 +81,15 @@ function playRound(humanChoice, computerChoice) {
             if(computerScore==5){
                 computer.style.color="green";
                 human.style.color="red";
+                result.textContent=`Computer won the game! [${computerScore} - ${humanScore}]`;
+                result.style.color="red";
+                main.appendChild(result);
             }else{
                 computer.style.color="red";
                 human.style.color="green";
+                result.textContent=`You won the game! [${humanScore} - ${computerScore}]`;
+                result.style.color="green";
+                main.appendChild(result);
             }
             finishedGame=true;
         }
@@ -136,6 +144,9 @@ let playAgain=()=>{
     cChoice.textContent='';
     announce.textContent="Start"
     announce.style.color="black"
-
+    result.remove();
 }
 again.addEventListener("click",playAgain)
+
+
+
