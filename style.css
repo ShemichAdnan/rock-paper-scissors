@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+h1,h2{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 100px;
+    background-color: limegreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+#announce{
+    margin-top: 20px;
+    font-size: 30px;
+    
+}
+#score{
+    display: flex;
+    justify-content:space-evenly;
+    
+    height: 180px;
+}
+#score h2{
+    margin-top: 20px;
+}
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+}
+button{
+    background-color: limegreen;
+    border: 2px solid rgb(43, 132, 43);
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 10px;
+}
