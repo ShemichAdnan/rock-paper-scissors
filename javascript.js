@@ -14,10 +14,14 @@ let humanScore=0
 let computerScore=0
 const announce=document.querySelector("#announce");
 const hScore=document.querySelector("#hScore");
-const cScore=document.querySelector("#cScore")
+const cScore=document.querySelector("#cScore");
+const hChoice=document.querySelector("#hChoice");
+const cChoice=document.querySelector("#cChoice");
 
 function playRound(humanChoice, computerChoice) {
     console.log(`${humanChoice} vs ${computerChoice}`)
+    hChoice.textContent=humanChoice.toUpperCase();
+    cChoice.textContent=computerChoice.toUpperCase();
     if(humanChoice=="rock"){
         if(computerChoice=="rock") {
             announce.textContent="Tie! You both chose Rock";
@@ -38,34 +42,38 @@ function playRound(humanChoice, computerChoice) {
         }
     }else if(humanChoice=="paper"){
         if(computerChoice=="rock") {
-            console.log("You won! Paper beats Rock")
+            announce.textContent="You won! Paper beats Rock";
             announce.style.color="green";
             humanScore++;
             hScore.textContent=humanScore;
             return
         }else if(computerChoice=="paper"){
-            console.log("Tie! You both chose Paper")
+            announce.textContent="Tie! You both chose Paper";
+            announce.style.color="gray";
             return 
         }else if(computerChoice=="scissors"){
-            console.log("You lose! Scissors beats Paper")
+            announce.textContent="You lose! Scissors beats Paper";
+            announce.style.color="red";
             computerScore++;
             cScore.textContent=computerScore;
             return 
         }
     }else if(humanChoice=="scissors"){
         if(computerChoice=="rock") {
-            console.log("You lose! Rock beats Scissors")
+            announce.textContent="You lose! Rock beats Scissors";
+            announce.style.color="red";
             computerScore++;
             cScore.textContent=computerScore;
             return
         }else if(computerChoice=="paper"){
-            console.log("You won! Scissors beats Paper")
+            announce.textContent="You won! Scissors beats Paper";
             announce.style.color="green";
             humanScore++;
             hScore.textContent=humanScore;
             return 
         }else if(computerChoice=="scissors"){
-            console.log("Tie! You both chose Scissors")
+            announce.textContent="Tie! You both chose Scissors";
+            announce.style.color="gray";
             return 
         }
     }

@@ -29,6 +29,15 @@ main{
     
     height: 180px;
 }
+#human{
+    width: 35%;
+}
+#computer{
+    width: 35%;
+}
+#hChoice,#cChoice{
+    color: lightgray;
+}
 #score h2{
     margin-top: 20px;
 }
