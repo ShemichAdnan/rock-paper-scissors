@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: rgb(233, 233, 212);
 }
 h1,h2{
     margin: 0;
@@ -7,7 +8,7 @@ h1,h2{
 }
 header{
     height: 100px;
-    background-color: limegreen;
+    background-color: lightblue;
     color: white;
     display: flex;
     justify-content: center;
@@ -17,6 +18,12 @@ main{
     width: 70%;
     margin: auto;
     text-align: center;
+}
+#again{
+    background-color: lime;
+    border: 2px solid rgb(37, 168, 37);
+    width: 130px;
+    margin-top: 25px;
 }
 #announce{
     margin-top: 20px;
@@ -35,9 +42,6 @@ main{
 #computer{
     width: 35%;
 }
-#hChoice,#cChoice{
-    color: lightgray;
-}
 #score h2{
     margin-top: 20px;
 }
@@ -47,8 +51,8 @@ main{
     margin: 20px 0px;
 }
 button{
-    background-color: limegreen;
-    border: 2px solid rgb(43, 132, 43);
+    background-color: lightblue;
+    border: 2px solid rgb(115, 166, 184);
     height: 50px;
     width: 100px;
     font-size: 20px;
